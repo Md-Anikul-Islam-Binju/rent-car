@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Dashboard | Admin</title>
+    <title>Dashboard | Admin Luxury Chauffeur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS,ERP etc." name="description" />
     <meta content="SDMGA" name="author" />
@@ -109,6 +109,13 @@
                 </li>
 
                 <li class="side-nav-item">
+                    <a href="{{route('fleet.index')}}" class="side-nav-link">
+                        <i class="ri-dashboard-3-line"></i>
+                        <span> Fleet </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
                     <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
                         <i class="ri-pages-line"></i>
                         <span> Vehicle </span>
@@ -140,7 +147,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <script>document.write(new Date().getFullYear())</script> © Super Admin</b>
+                        <script>document.write(new Date().getFullYear())</script> © Admin Luxury Chauffeur</b>
                     </div>
                 </div>
             </div>

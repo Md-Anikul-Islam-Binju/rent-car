@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Log In | Admin</title>
+    <title>Log In | Admin Luxury Chauffeur</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully responsive admin theme which can be used to build CRM, CMS, ERP, etc." name="description" />
     <meta content="Your Name" name="author" />
@@ -74,7 +74,7 @@
 </div>
 <footer class="footer footer-alt fw-medium">
     <span class="text-dark">
-        <script>document.write(new Date().getFullYear())</script> © Super Admin
+        <script>document.write(new Date().getFullYear())</script> © Admin Luxury Chauffeur
     </span>
 </footer>
 <script src="{{ asset('backend/js/vendor.min.js') }}"></script>
