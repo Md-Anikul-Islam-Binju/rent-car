@@ -33,6 +33,8 @@
                         <th>Number</th>
                         <th>Seats</th>
                         <th>Bag</th>
+                        <th>PKF</th>
+                        <th>PKFDW</th>
                         <th>image</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -47,6 +49,9 @@
                             <td>{{$fleetData->number}}</td>
                             <td>{{$fleetData->total_seats}}</td>
                             <td>{{$fleetData->total_bag}}</td>
+
+                            <td>{{$fleetData->per_kilometer_fare}} $</td>
+                            <td>{{$fleetData->per_kilometer_fare_duration_wise}} $</td>
                             <td>
                                 <img src="{{asset('images/fleet/'. $fleetData->image )}}" alt="Current Image" style="max-width: 50px;">
                             </td>
@@ -106,6 +111,22 @@
                                                             <label for="total_bag" class="form-label">Total Bags</label>
                                                             <input type="number" id="total_bag" name="total_bag"
                                                                    class="form-control" placeholder="Enter Bags" value="{{ $fleetData->total_bag }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="per_kilometer_fare" class="form-label">Per Kilometer Fare</label>
+                                                            <input type="text" id="per_kilometer_fare" name="per_kilometer_fare"
+                                                                   class="form-control" placeholder="Per Kilometer Fare" value="{{ $fleetData->per_kilometer_fare }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="per_kilometer_fare_duration_wise" class="form-label">Per Kilometer Fare Duration Wise (Per hr)</label>
+                                                            <input type="text" id="per_kilometer_fare_duration_wise" name="per_kilometer_fare_duration_wise"
+                                                                   class="form-control" placeholder="Per Kilometer Fare Duration Wise" value="{{ $fleetData->per_kilometer_fare_duration_wise }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
@@ -218,6 +239,23 @@
                                 <div class="mb-3">
                                     <label for="image" class="form-label">Image</label>
                                     <input type="file" name="image" id="image" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="per_kilometer_fare" class="form-label">Per Kilometer Fare</label>
+                                    <input type="text" id="per_kilometer_fare" name="per_kilometer_fare"
+                                           class="form-control" placeholder="Per Kilometer Fare" value="{{ old('per_kilometer_fare') }}">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="per_kilometer_fare_duration_wise" class="form-label">Per Kilometer Fare Duration Wise (Per hr)</label>
+                                    <input type="text" id="per_kilometer_fare_duration_wise" name="per_kilometer_fare_duration_wise"
+                                           class="form-control" placeholder="Per Kilometer Fare Duration Wise" value="{{ old('per_kilometer_fare_duration_wise') }}">
                                 </div>
                             </div>
                         </div>

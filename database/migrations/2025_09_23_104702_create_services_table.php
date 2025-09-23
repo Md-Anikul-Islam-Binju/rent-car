@@ -11,16 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('fleets', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('model')->nullable();
-            $table->string('number')->nullable();
-            $table->integer('total_seats')->nullable();
-            $table->integer('total_bag')->nullable();
-            $table->string('image')->nullable();
-            $table->string('per_kilometer_fare')->nullable();
-            $table->string('per_kilometer_fare_duration_wise')->nullable();
+            $table->string('type')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
@@ -31,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('fleets');
+        Schema::dropIfExists('services');
     }
 };

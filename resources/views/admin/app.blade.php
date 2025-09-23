@@ -116,22 +116,29 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">
-                        <i class="ri-pages-line"></i>
-                        <span> Vehicle </span>
-                        <span class="menu-arrow"></span>
+                    <a href="{{route('service.index')}}" class="side-nav-link">
+                        <i class="ri-dashboard-3-line"></i>
+                        <span> Services </span>
                     </a>
-                    <div class="collapse" id="sidebarPages">
-                        <ul class="side-nav-second-level">
-                            <li>
-                                <a href="#">Vehicle Type</a>
-                            </li>
-                            <li>
-                                <a href="#">Vehicle List</a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
+
+{{--                <li class="side-nav-item">--}}
+{{--                    <a data-bs-toggle="collapse" href="#sidebarPages" aria-expanded="false" aria-controls="sidebarPages" class="side-nav-link">--}}
+{{--                        <i class="ri-pages-line"></i>--}}
+{{--                        <span> Vehicle </span>--}}
+{{--                        <span class="menu-arrow"></span>--}}
+{{--                    </a>--}}
+{{--                    <div class="collapse" id="sidebarPages">--}}
+{{--                        <ul class="side-nav-second-level">--}}
+{{--                            <li>--}}
+{{--                                <a href="#">Vehicle Type</a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="#">Vehicle List</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </li>--}}
             </ul>
             <div class="clearfix"></div>
         </div>

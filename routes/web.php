@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\FleetController;
+use App\Http\Controllers\admin\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,5 +30,11 @@ Route::middleware('auth')->group(callback: function () {
     Route::post('/fleet/store', [FleetController::class, 'store'])->name('fleet.store');
     Route::put('/fleet/update/{id}', [FleetController::class, 'update'])->name('fleet.update');
     Route::get('/fleet/delete/{id}', [FleetController::class, 'destroy'])->name('fleet.destroy');
+
+    //Service
+    Route::get('/service', [ServiceController::class, 'index'])->name('service.index');
+    Route::post('/service/store', [ServiceController::class, 'store'])->name('service.store');
+    Route::put('/service/update/{id}', [ServiceController::class, 'update'])->name('service.update');
+    Route::get('/service/delete/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
 });
 require __DIR__.'/auth.php';
