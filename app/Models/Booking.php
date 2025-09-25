@@ -12,9 +12,19 @@ class Booking extends Model
         'service_id',
         'fleet_id',
         'date',
+        'time',
         'no_of_adults',
         'no_of_children',
+        'pickup_location',
+        'drop_location',
 
-        'time',
+        'name',
+        'email',
+        'phone',
+        'notes',
+        'total_kilometers',
+
+
+
     ];
 }
