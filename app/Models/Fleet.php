@@ -18,6 +18,7 @@ class Fleet extends Model
         'image',
         'per_kilometer_fare',
         'per_kilometer_fare_duration_wise',
+        'details',
         'status',
 
     ];

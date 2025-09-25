@@ -30,6 +30,7 @@
                         <th>S/N</th>
                         <th>Name</th>
                         <th>Type</th>
+                        <th>Image</th>
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
@@ -40,6 +41,9 @@
                             <td>{{$key+1}}</td>
                             <td>{{$servicesData->name}}</td>
                             <td>{{$servicesData->type}}</td>
+                            <td>
+                                <img src="{{asset('images/service/'. $servicesData->image )}}" alt="Current Image" style="max-width: 50px;">
+                            </td>
                             <td>{{$servicesData->status=='active'? 'Active':'Inactive'}}</td>
                             <td style="width: 100px;">
                                 <div class="d-flex justify-content-end gap-1">
@@ -72,6 +76,24 @@
                                                             <label for="type" class="form-label">Type</label>
                                                             <input type="text" id="type" name="type"
                                                                    class="form-control" placeholder="Enter Type" value="{{  $servicesData->type }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="details" class="form-label">Details</label>
+                                                            <textarea type="text" id="details" name="details"
+                                                                      class="form-control" placeholder="Enter Details"> {{  $servicesData->details }}</textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="image" class="form-label">Image</label>
+                                                            <input type="file" name="image" id="image" class="form-control">
+                                                            @if($servicesData->image)
+                                                                <img src="{{ asset('images/service/'.$servicesData->image) }}" alt="Fleet Image" class="mt-2" style="max-width: 50px;">
+                                                            @endif
                                                         </div>
                                                     </div>
 
@@ -147,6 +169,22 @@
                                            class="form-control" placeholder="Enter Type" value="{{ old('type') }}">
                                 </div>
                             </div>
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="details" class="form-label">Details</label>
+                                    <textarea type="text" id="details" name="details"
+                                              class="form-control" placeholder="Enter Details" ></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="image" class="form-label">Image</label>
+                                    <input type="file" name="image" id="image" class="form-control">
+                                </div>
+                            </div>
+
                         </div>
                         <div class="d-flex justify-content-end">
                             <button class="btn btn-primary" type="submit">Submit</button>

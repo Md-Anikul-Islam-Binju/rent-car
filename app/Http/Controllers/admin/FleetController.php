@@ -35,6 +35,7 @@ class FleetController extends Controller
             $fleet->per_kilometer_fare = $request->per_kilometer_fare;
             $fleet->per_kilometer_fare_duration_wise = $request->per_kilometer_fare_duration_wise;
             $fleet->total_bag = $request->total_bag;
+            $fleet->details = $request->details;
             if ($request->image) {
                 $file = time() . '.' . $request->image->extension();
                 $request->image->move(public_path('images/fleet'), $file);
@@ -70,6 +71,7 @@ class FleetController extends Controller
             $fleet->total_bag = $request->total_bag;
             $fleet->per_kilometer_fare = $request->per_kilometer_fare;
             $fleet->per_kilometer_fare_duration_wise = $request->per_kilometer_fare_duration_wise;
+            $fleet->details = $request->details;
             if ($request->image) {
                 $file = time() . '.' . $request->image->extension();
                 $request->image->move(public_path('images/fleet'), $file);

@@ -150,6 +150,14 @@
                                                             @endif
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="details" class="form-label">Details</label>
+                                                            <textarea type="text" id="details" name="details"
+                                                                      class="form-control" placeholder="Enter Details"> {{  $fleetData->details }}</textarea>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
                                                 <div class="d-flex justify-content-end">
@@ -256,6 +264,14 @@
                                     <label for="per_kilometer_fare_duration_wise" class="form-label">Per Kilometer Fare Duration Wise (Per hr)</label>
                                     <input type="text" id="per_kilometer_fare_duration_wise" name="per_kilometer_fare_duration_wise"
                                            class="form-control" placeholder="Per Kilometer Fare Duration Wise" value="{{ old('per_kilometer_fare_duration_wise') }}">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="details" class="form-label">Details</label>
+                                    <textarea type="text" id="details" name="details"
+                                              class="form-control" placeholder="Enter Details"></textarea>
                                 </div>
                             </div>
                         </div>

@@ -21,11 +21,18 @@ class ServiceController extends Controller
             $validatedData = $request->validate([
                 'name' => 'required',
                 'type' => 'required',
+                'details' => 'nullable',
+                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp',
             ]);
-
             $service = new Service();
             $service->name = $request->name;
             $service->type = $request->type;
+            $service->details = $request->details;
+            if ($request->image) {
+                $file = time() . '.' . $request->image->extension();
+                $request->image->move(public_path('images/service'), $file);
+                $service->image = $file;
+            }
             $service->save();
             Toastr::success('Service Add Successfully', 'Success');
             return redirect()->back();
@@ -44,6 +51,12 @@ class ServiceController extends Controller
             $service = Service::findOrFail($id);
             $service->name = $request->name;
             $service->type = $request->type;
+            $service->details = $request->details;
+            if ($request->image) {
+                $file = time() . '.' . $request->image->extension();
+                $request->image->move(public_path('images/service'), $file);
+                $service->image = $file;
+            }
             $service->status = $request->status;
             $service->save();
             Toastr::success('Service Update Successfully', 'Success');
@@ -53,10 +66,15 @@ class ServiceController extends Controller
             return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
         }
     }
+
     public function destroy($id)
     {
         try {
             $service = Service::findOrFail($id);
+            $filePath = public_path('images/service/' . $service->image);
+            if (file_exists($filePath)) {
+                unlink($filePath);
+            }
             $service->delete();
             Toastr::success('Service Delete Successfully', 'Success');
             return redirect()->back();

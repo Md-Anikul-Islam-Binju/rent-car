@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('per_kilometer_fare')->nullable();
             $table->string('per_kilometer_fare_duration_wise')->nullable();
+            $table->text('details')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
