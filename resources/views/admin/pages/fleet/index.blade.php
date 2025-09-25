@@ -151,7 +151,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12">
+                                                    <div class="col-6">
                                                         <div class="mb-3">
                                                             <label for="details" class="form-label">Details</label>
                                                             <textarea type="text" id="details" name="details"

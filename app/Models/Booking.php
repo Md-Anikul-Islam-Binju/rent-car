@@ -14,5 +14,7 @@ class Booking extends Model
         'date',
         'no_of_adults',
         'no_of_children',
+
+        'time',
     ];
 }
