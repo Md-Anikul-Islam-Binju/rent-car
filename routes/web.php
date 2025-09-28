@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\BookingHistoryController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\FleetController;
 use App\Http\Controllers\admin\ServiceController;
@@ -36,5 +37,8 @@ Route::middleware('auth')->group(callback: function () {
     Route::post('/service/store', [ServiceController::class, 'store'])->name('service.store');
     Route::put('/service/update/{id}', [ServiceController::class, 'update'])->name('service.update');
     Route::get('/service/delete/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
+
+
+    Route::get('/booking-history', [BookingHistoryController::class, 'bookingHistory'])->name('booking.history');
 });
 require __DIR__.'/auth.php';

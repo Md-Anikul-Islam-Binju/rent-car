@@ -27,4 +27,14 @@ class Booking extends Model
 
 
     ];
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
+    }
+
+    public function fleet()
+    {
+        return $this->belongsTo(Fleet::class);
+    }
 }
