@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\BookingController;
 use App\Http\Controllers\api\FleetController;
 use App\Http\Controllers\api\ServiceController;
@@ -24,5 +25,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/fleets', [FleetController::class, 'fleet']);
 Route::get('/services', [ServiceController::class, 'service']);
+Route::get('/blog', [BlogController::class, 'blog']);
 
 Route::post('/booking-store', [BookingController::class, 'store']);

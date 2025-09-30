@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\BlogController;
 use App\Http\Controllers\admin\BookingHistoryController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\FleetController;
@@ -38,6 +39,11 @@ Route::middleware('auth')->group(callback: function () {
     Route::put('/service/update/{id}', [ServiceController::class, 'update'])->name('service.update');
     Route::get('/service/delete/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
 
+    //Blog
+    Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+    Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
+    Route::put('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update');
+    Route::get('/blog/delete/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
     Route::get('/booking-history', [BookingHistoryController::class, 'bookingHistory'])->name('booking.history');
 });

@@ -124,6 +124,13 @@
                 </li>
 
                 <li class="side-nav-item">
+                    <a href="{{route('blog.index')}}" class="side-nav-link">
+                        <i class="ri-dashboard-3-line"></i>
+                        <span> Blog </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
                     <a href="{{route('booking.history')}}" class="side-nav-link">
                         <i class="ri-dashboard-3-line"></i>
                         <span> Booking History </span>
