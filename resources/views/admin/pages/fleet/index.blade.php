@@ -34,6 +34,7 @@
                         <th>Seats</th>
                         <th>Bag</th>
                         <th>PKF</th>
+                        <th>Base Fare</th>
                         <th>PKFDW</th>
                         <th>image</th>
                         <th>Status</th>
@@ -49,7 +50,7 @@
                             <td>{{$fleetData->number}}</td>
                             <td>{{$fleetData->total_seats}}</td>
                             <td>{{$fleetData->total_bag}}</td>
-
+                            <td>{{$fleetData->base_fare	}} $</td>
                             <td>{{$fleetData->per_kilometer_fare}} $</td>
                             <td>{{$fleetData->per_kilometer_fare_duration_wise}} $</td>
                             <td>
@@ -116,6 +117,14 @@
 
                                                     <div class="col-6">
                                                         <div class="mb-3">
+                                                            <label for="base_fare" class="form-label">Car Base Fare</label>
+                                                            <input type="text" id="base_fare" name="base_fare"
+                                                                   class="form-control" placeholder="Car Base Fare" value="{{ $fleetData->base_fare }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
                                                             <label for="per_kilometer_fare" class="form-label">Per Kilometer Fare</label>
                                                             <input type="text" id="per_kilometer_fare" name="per_kilometer_fare"
                                                                    class="form-control" placeholder="Per Kilometer Fare" value="{{ $fleetData->per_kilometer_fare }}">
@@ -138,9 +147,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                </div>
 
-                                                <div class="row">
                                                     <div class="col-6">
                                                         <div class="mb-3">
                                                             <label for="image" class="form-label">Image</label>
@@ -150,14 +157,18 @@
                                                             @endif
                                                         </div>
                                                     </div>
+                                                </div>
 
-                                                    <div class="col-6">
+                                                <div class="row">
+
+
+                                                    <div class="col-12">
                                                         <div class="mb-3">
-                                                            <label for="details" class="form-label">Details</label>
-                                                            <textarea type="text" id="details" name="details"
-                                                                      class="form-control" placeholder="Enter Details"> {{  $fleetData->details }}</textarea>
+                                                            <label>Details</label>
+                                                            <textarea id="summernoteEdit{{ $fleetData->id }}" name="details">{{ $fleetData->details }}</textarea>
                                                         </div>
                                                     </div>
+
                                                 </div>
 
                                                 <div class="d-flex justify-content-end">
@@ -250,6 +261,15 @@
                                 </div>
                             </div>
 
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="base_fare" class="form-label">Car Base Fare</label>
+                                    <input type="text" id="base_fare" name="base_fare"
+                                           class="form-control" placeholder="Car Base Fare" value="{{ old('base_fare') }}">
+                                </div>
+                            </div>
+
+
 
                             <div class="col-6">
                                 <div class="mb-3">
@@ -267,11 +287,14 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
-                                <div class="mb-3">
-                                    <label for="details" class="form-label">Details</label>
-                                    <textarea type="text" id="details" name="details"
-                                              class="form-control" placeholder="Enter Details"></textarea>
+
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label> Details </label>
+                                        <textarea id="summernote" name="details"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>

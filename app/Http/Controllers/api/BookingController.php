@@ -48,6 +48,7 @@ class BookingController extends Controller
             'phone' => $request->phone,
             'notes' => $request->notes,
             'total_kilometers' => $request->total_kilometers,
+            'is_duration_trip' => $request->is_duration_trip ?? 0,
         ]);
 
         return response()->json([

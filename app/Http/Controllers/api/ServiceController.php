@@ -9,9 +9,17 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
+
+
     public function service()
     {
-        $services = Service::all();
-        return response()->json(['services'=>$services],200);
+        $services = Service::all()->map(function ($services) {
+            // prepend image path
+            $services->image = asset('images/service/' . $services->image);
+            return $services;
+        });
+
+        return response()->json(['services' => $services], 200);
     }
+
 }

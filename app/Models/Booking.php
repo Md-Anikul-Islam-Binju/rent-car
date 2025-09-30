@@ -23,6 +23,7 @@ class Booking extends Model
         'phone',
         'notes',
         'total_kilometers',
+        'is_duration_trip',
 
 
 

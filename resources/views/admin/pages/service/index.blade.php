@@ -79,11 +79,11 @@
                                                         </div>
                                                     </div>
 
+
                                                     <div class="col-12">
                                                         <div class="mb-3">
-                                                            <label for="details" class="form-label">Details</label>
-                                                            <textarea type="text" id="details" name="details"
-                                                                      class="form-control" placeholder="Enter Details"> {{  $servicesData->details }}</textarea>
+                                                            <label>Details</label>
+                                                            <textarea id="summernoteEdit{{ $servicesData->id }}" name="details">{{ $servicesData->details }}</textarea>
                                                         </div>
                                                     </div>
 
@@ -172,11 +172,12 @@
 
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="details" class="form-label">Details</label>
-                                    <textarea type="text" id="details" name="details"
-                                              class="form-control" placeholder="Enter Details" ></textarea>
+                                    <label> Details </label>
+                                    <textarea id="summernote" name="details"></textarea>
                                 </div>
                             </div>
+
+
 
                             <div class="col-12">
                                 <div class="mb-3">

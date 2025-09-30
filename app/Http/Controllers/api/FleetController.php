@@ -10,7 +10,12 @@ class FleetController extends Controller
 {
     public function fleet()
     {
-        $fleets = Fleet::all();
-        return response()->json(['fleets'=>$fleets],200);
+        $fleets = Fleet::all()->map(function ($fleet) {
+            // prepend image path
+            $fleet->image = asset('images/fleet/' . $fleet->image);
+            return $fleet;
+        });
+
+        return response()->json(['fleets' => $fleets], 200);
     }
 }

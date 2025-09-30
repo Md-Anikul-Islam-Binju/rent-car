@@ -31,6 +31,7 @@ class FleetController extends Controller
             $fleet->name = $request->name;
             $fleet->model = $request->model;
             $fleet->number = $request->number;
+            $fleet->base_fare = $request->base_fare;
             $fleet->total_seats = $request->total_seats;
             $fleet->per_kilometer_fare = $request->per_kilometer_fare;
             $fleet->per_kilometer_fare_duration_wise = $request->per_kilometer_fare_duration_wise;
@@ -69,6 +70,7 @@ class FleetController extends Controller
             $fleet->number = $request->number;
             $fleet->total_seats = $request->total_seats;
             $fleet->total_bag = $request->total_bag;
+            $fleet->base_fare = $request->base_fare;
             $fleet->per_kilometer_fare = $request->per_kilometer_fare;
             $fleet->per_kilometer_fare_duration_wise = $request->per_kilometer_fare_duration_wise;
             $fleet->details = $request->details;

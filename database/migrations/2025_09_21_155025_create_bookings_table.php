@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->text('notes')->nullable();
             $table->string('total_kilometers')->nullable();
+            $table->boolean('is_duration_trip')->default(0);
             $table->timestamps();
         });
     }
