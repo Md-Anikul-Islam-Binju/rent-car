@@ -25,6 +25,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/fleets', [FleetController::class, 'fleet']);
 Route::get('/services', [ServiceController::class, 'service']);
+Route::get('/specific-services/{id}', [ServiceController::class, 'serviceSpecific']);
+
 Route::get('/blog', [BlogController::class, 'blog']);
+Route::get('/specific-blog/{id}', [BlogController::class, 'blogSpecific']);
 
 Route::post('/booking-store', [BookingController::class, 'store']);

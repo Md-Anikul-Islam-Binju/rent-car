@@ -18,4 +18,15 @@ class BlogController extends Controller
 
         return response()->json(['blogs' => $blogs], 200);
     }
+
+
+    public function blogSpecific($id)
+    {
+        $blogSpecific = Blog::where('id', $id)->first();
+        if ($blogSpecific) {
+            // prepend image path
+            $blogSpecific->image = asset('images/blog/' . $blogSpecific->image);
+        }
+        return response()->json(['blog' => $blogSpecific], 200);
+    }
 }
