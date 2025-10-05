@@ -27,6 +27,8 @@ return new class extends Migration
             $table->text('notes')->nullable();
             $table->string('total_kilometers')->nullable();
             $table->boolean('is_duration_trip')->default(0);
+            $table->boolean('is_round_trip')->default(0);
+            $table->boolean('is_created_account')->default(0);
             $table->timestamps();
         });
     }

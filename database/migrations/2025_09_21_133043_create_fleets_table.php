@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('total_bag')->nullable();
             $table->string('image')->nullable();
             $table->string('base_fare')->nullable();
+            $table->string('short_details')->nullable();
             $table->string('per_kilometer_fare')->nullable();
             $table->string('per_kilometer_fare_duration_wise')->nullable();
             $table->text('details')->nullable();

@@ -27,6 +27,7 @@ class ServiceController extends Controller
             $service = new Service();
             $service->name = $request->name;
             $service->type = $request->type;
+            $service->short_details = $request->short_details;
             $service->details = $request->details;
             if ($request->image) {
                 $file = time() . '.' . $request->image->extension();
@@ -51,6 +52,7 @@ class ServiceController extends Controller
             $service = Service::findOrFail($id);
             $service->name = $request->name;
             $service->type = $request->type;
+            $service->short_details = $request->short_details;
             $service->details = $request->details;
             if ($request->image) {
                 $file = time() . '.' . $request->image->extension();

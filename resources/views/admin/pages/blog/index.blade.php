@@ -97,6 +97,13 @@
 
                                                 <div class="row">
 
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Short Details</label>
+                                                            <input type="text" name="short_details" value="{{$blogsData->short_details}}" class="form-control">
+                                                        </div>
+                                                    </div>
+
 
                                                     <div class="col-12">
                                                         <div class="mb-3">
@@ -168,6 +175,13 @@
                             </div>
 
                             <div class="row">
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Short Details</label>
+                                        <input type="text" name="short_details"  class="form-control">
+                                    </div>
+                                </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label> Details </label>

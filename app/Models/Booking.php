@@ -25,6 +25,9 @@ class Booking extends Model
         'total_kilometers',
         'is_duration_trip',
 
+        'is_round_trip',
+        'is_created_account',
+
 
 
     ];

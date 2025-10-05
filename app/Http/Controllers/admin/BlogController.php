@@ -25,6 +25,7 @@ class BlogController extends Controller
 
             $blog = new Blog();
             $blog->title = $request->title;
+            $blog->short_details = $request->short_details;
             $blog->details = $request->details;
             if ($request->image) {
                 $file = time() . '.' . $request->image->extension();
@@ -52,6 +53,7 @@ class BlogController extends Controller
             $blog = Blog::findOrFail($id);
             $blog->title = $request->title;
             $blog->details = $request->details;
+            $blog->short_details = $request->short_details;
             if ($request->image) {
                 $file = time() . '.' . $request->image->extension();
                 $request->image->move(public_path('images/blog'), $file);

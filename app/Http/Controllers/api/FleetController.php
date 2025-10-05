@@ -18,4 +18,15 @@ class FleetController extends Controller
 
         return response()->json(['fleets' => $fleets], 200);
     }
+
+    public function fleetSpecific($id)
+    {
+        $fleetSpecific = Fleet::where('id', $id)->first();
+        if ($fleetSpecific) {
+            // prepend image path
+            $fleetSpecific->image = asset('images/fleet/' . $fleetSpecific->image);
+        }
+        return response()->json(['fleet' => $fleetSpecific], 200);
+    }
+
 }

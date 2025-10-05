@@ -13,6 +13,7 @@ class Service extends Model
         'type',
         'image',
         'details',
+        'short_details',
         'status',
 
     ];

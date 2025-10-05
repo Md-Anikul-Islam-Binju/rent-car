@@ -160,7 +160,12 @@
                                                 </div>
 
                                                 <div class="row">
-
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label>Short Details</label>
+                                                            <input type="text" name="short_details" value="{{$fleetData->short_details}}" class="form-control">
+                                                        </div>
+                                                    </div>
 
                                                     <div class="col-12">
                                                         <div class="mb-3">
@@ -286,6 +291,15 @@
                                            class="form-control" placeholder="Per Kilometer Fare Duration Wise" value="{{ old('per_kilometer_fare_duration_wise') }}">
                                 </div>
                             </div>
+
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Short Details</label>
+                                    <input type="text" name="short_details" class="form-control">
+                                </div>
+                            </div>
+
+
 
 
 

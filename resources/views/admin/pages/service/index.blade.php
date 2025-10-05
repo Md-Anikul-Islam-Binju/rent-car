@@ -79,6 +79,13 @@
                                                         </div>
                                                     </div>
 
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Short Details</label>
+                                                            <input type="text" name="short_details" value="{{$servicesData->short_details}}" class="form-control">
+                                                        </div>
+                                                    </div>
+
 
                                                     <div class="col-12">
                                                         <div class="mb-3">
@@ -167,6 +174,13 @@
                                     <label for="type" class="form-label">Type</label>
                                     <input type="text" id="type" name="type"
                                            class="form-control" placeholder="Enter Type" value="{{ old('type') }}">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Short Details</label>
+                                    <input type="text" name="short_details"  class="form-control">
                                 </div>
                             </div>
 
