@@ -31,6 +31,8 @@ class Booking extends Model
         'is_duration_trip',
 
         'is_round_trip',
+        'total_amount',
+        'payment_status',
 
 
 

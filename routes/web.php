@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\BookingHistoryController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\FleetController;
 use App\Http\Controllers\admin\ServiceController;
+use App\Http\Controllers\frontend\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('auth/login');
 });
+//payment
+Route::get('/payment/{booking_id}', [PaymentController::class, 'payment'])->name('payment');
+Route::post('/stripe-post', [PaymentController::class, 'stripePost'])->name('stripe.post');
+
 
 //Admin
 Route::middleware('auth')->group(callback: function () {

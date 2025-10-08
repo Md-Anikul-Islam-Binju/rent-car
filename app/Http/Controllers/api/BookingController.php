@@ -71,6 +71,7 @@ class BookingController extends Controller
             'total_kilometers' => $request->total_kilometers,
             'is_duration_trip' => $request->is_duration_trip ?? 0,
             'is_round_trip' => $request->is_round_trip ?? 0,
+            'total_amount' => $request->total_amount,
         ]);
 
         // Send mail (with password if new account)

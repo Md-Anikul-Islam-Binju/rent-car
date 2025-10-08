@@ -34,7 +34,8 @@ return new class extends Migration
             $table->string('total_kilometers')->nullable();
             $table->boolean('is_duration_trip')->default(0);
             $table->boolean('is_round_trip')->default(0);
-
+            $table->string('total_amount')->nullable();
+            $table->string('payment_status')->default('unpaid'); // unpaid, paid, refunded
             $table->timestamps();
         });
     }
