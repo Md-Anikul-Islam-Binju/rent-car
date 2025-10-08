@@ -23,15 +23,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/store-user', [UserAccountController::class, 'storeUser']);
+
 
 Route::get('/fleets', [FleetController::class, 'fleet']);
 Route::get('/specific-fleet/{id}', [FleetController::class, 'fleetSpecific']);
-
 Route::get('/services', [ServiceController::class, 'service']);
 Route::get('/specific-services/{id}', [ServiceController::class, 'serviceSpecific']);
-
 Route::get('/blog', [BlogController::class, 'blog']);
 Route::get('/specific-blog/{id}', [BlogController::class, 'blogSpecific']);
-
 Route::post('/booking-store', [BookingController::class, 'store']);
+
+
+Route::post('/login', [UserAccountController::class, 'login']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/my-bookings', [BookingController::class, 'myBookings']);
+});

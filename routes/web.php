@@ -46,5 +46,7 @@ Route::middleware('auth')->group(callback: function () {
     Route::get('/blog/delete/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
     Route::get('/booking-history', [BookingHistoryController::class, 'bookingHistory'])->name('booking.history');
+
+    Route::get('/bookings/calendar', [BookingHistoryController::class, 'calendarData'])->name('bookings.calendar');
 });
 require __DIR__.'/auth.php';

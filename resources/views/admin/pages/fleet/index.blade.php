@@ -32,7 +32,8 @@
                         <th>Model</th>
                         <th>Number</th>
                         <th>Seats</th>
-                        <th>Bag</th>
+                        <th>Checking Bag</th>
+                        <th>Carry Bag</th>
                         <th>PKF</th>
                         <th>Base Fare</th>
                         <th>PKFDW</th>
@@ -49,7 +50,8 @@
                             <td>{{$fleetData->model}}</td>
                             <td>{{$fleetData->number}}</td>
                             <td>{{$fleetData->total_seats}}</td>
-                            <td>{{$fleetData->total_bag}}</td>
+                            <td>{{$fleetData->checking_bag}}</td>
+                            <td>{{$fleetData->carry_bag}}</td>
                             <td>{{$fleetData->base_fare	}} $</td>
                             <td>{{$fleetData->per_kilometer_fare}} $</td>
                             <td>{{$fleetData->per_kilometer_fare_duration_wise}} $</td>
@@ -109,9 +111,17 @@
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="mb-3">
-                                                            <label for="total_bag" class="form-label">Total Bags</label>
-                                                            <input type="number" id="total_bag" name="total_bag"
-                                                                   class="form-control" placeholder="Enter Bags" value="{{ $fleetData->total_bag }}">
+                                                            <label for="checking_bag" class="form-label">Checking Bags</label>
+                                                            <input type="number" id="checking_bag" name="checking_bag"
+                                                                   class="form-control" placeholder="Enter Bags" value="{{ $fleetData->checking_bag }}">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="carry_bag" class="form-label">Carry Bags</label>
+                                                            <input type="number" id="carry_bag" name="carry_bag"
+                                                                   class="form-control" placeholder="Enter Bags" value="{{ $fleetData->carry_bag }}">
                                                         </div>
                                                     </div>
 
@@ -254,9 +264,17 @@
                             </div>
                             <div class="col-6">
                                 <div class="mb-3">
-                                    <label for="total_bag" class="form-label">Total Bags</label>
-                                    <input type="number" id="total_bag" name="total_bag"
-                                           class="form-control" placeholder="Enter Bags" value="{{ old('total_bag') }}">
+                                    <label for="checking_bag" class="form-label">Checking Bags</label>
+                                    <input type="number" id="checking_bag" name="checking_bag"
+                                           class="form-control" placeholder="Enter Bags" value="{{ $fleetData->checking_bag }}">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="carry_bag" class="form-label">Carry Bags</label>
+                                    <input type="number" id="carry_bag" name="carry_bag"
+                                           class="form-control" placeholder="Enter Bags" value="{{ $fleetData->carry_bag }}">
                                 </div>
                             </div>
                             <div class="col-6">

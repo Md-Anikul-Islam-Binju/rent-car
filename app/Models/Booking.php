@@ -9,12 +9,17 @@ class Booking extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'user_id',
         'service_id',
         'fleet_id',
         'date',
         'time',
         'no_of_adults',
-        'no_of_children',
+
+        'baby_seat',
+        'booster_seat',
+
+
         'pickup_location',
         'drop_location',
 
@@ -26,7 +31,7 @@ class Booking extends Model
         'is_duration_trip',
 
         'is_round_trip',
-        'is_created_account',
+
 
 
 

@@ -23,7 +23,6 @@ class FleetController extends Controller
                 'model' => 'required',
                 'number' => 'required',
                 'total_seats' => 'required',
-                'total_bag' => 'required',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp',
             ]);
 
@@ -32,7 +31,8 @@ class FleetController extends Controller
             $fleet->model = $request->model;
             $fleet->number = $request->number;
             $fleet->base_fare = $request->base_fare;
-            $fleet->total_seats = $request->total_seats;
+            $fleet->checking_bag = $request->checking_bag;
+            $fleet->carry_bag = $request->carry_bag;
             $fleet->short_details = $request->short_details;
             $fleet->per_kilometer_fare = $request->per_kilometer_fare;
             $fleet->per_kilometer_fare_duration_wise = $request->per_kilometer_fare_duration_wise;
@@ -59,7 +59,6 @@ class FleetController extends Controller
                 'model' => 'required',
                 'number' => 'required',
                 'total_seats' => 'required',
-                'total_bag' => 'required',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp',
                 'status' => 'required|in:active,inactive',
             ]);
@@ -70,7 +69,8 @@ class FleetController extends Controller
             $fleet->model = $request->model;
             $fleet->number = $request->number;
             $fleet->total_seats = $request->total_seats;
-            $fleet->total_bag = $request->total_bag;
+            $fleet->checking_bag = $request->checking_bag;
+            $fleet->carry_bag = $request->carry_bag;
             $fleet->base_fare = $request->base_fare;
             $fleet->short_details = $request->short_details;
             $fleet->per_kilometer_fare = $request->per_kilometer_fare;

@@ -13,12 +13,18 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('service_id')->nullable();
             $table->unsignedBigInteger('fleet_id')->nullable();
             $table->date('date')->nullable();
             $table->time('time')->nullable();
             $table->integer('no_of_adults')->nullable();
-            $table->integer('no_of_children')->nullable();
+
+            $table->integer('baby_seat')->default(0);
+            $table->integer('booster_seat')->default(0);
+
+
+
             $table->string('pickup_location')->nullable();
             $table->string('drop_location')->nullable();
             $table->string('name')->nullable();
@@ -28,7 +34,7 @@ return new class extends Migration
             $table->string('total_kilometers')->nullable();
             $table->boolean('is_duration_trip')->default(0);
             $table->boolean('is_round_trip')->default(0);
-            $table->boolean('is_created_account')->default(0);
+
             $table->timestamps();
         });
     }

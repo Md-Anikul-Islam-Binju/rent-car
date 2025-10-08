@@ -17,7 +17,12 @@ return new class extends Migration
             $table->string('model')->nullable();
             $table->string('number')->nullable();
             $table->integer('total_seats')->nullable();
-            $table->integer('total_bag')->nullable();
+
+
+
+            $table->integer('checking_bag')->nullable();
+            $table->integer('carry_bag')->nullable();
+
             $table->string('image')->nullable();
             $table->string('base_fare')->nullable();
             $table->string('short_details')->nullable();

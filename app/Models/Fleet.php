@@ -14,7 +14,12 @@ class Fleet extends Model
         'model',
         'number',
         'total_seats',
-        'total_bag',
+
+
+
+        'checking_bag',
+        'carry_bag',
+
         'image',
         'base_fare',
         'per_kilometer_fare',
