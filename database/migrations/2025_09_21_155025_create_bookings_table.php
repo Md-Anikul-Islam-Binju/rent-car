@@ -19,12 +19,8 @@ return new class extends Migration
             $table->date('date')->nullable();
             $table->time('time')->nullable();
             $table->integer('no_of_adults')->nullable();
-
             $table->integer('baby_seat')->default(0);
             $table->integer('booster_seat')->default(0);
-
-
-
             $table->string('pickup_location')->nullable();
             $table->string('drop_location')->nullable();
             $table->string('name')->nullable();
@@ -36,6 +32,8 @@ return new class extends Migration
             $table->boolean('is_round_trip')->default(0);
             $table->string('total_amount')->nullable();
             $table->string('payment_status')->default('unpaid'); // unpaid, paid, refunded
+            $table->time('flight_arrival_time')->nullable();
+            $table->string('flight_number')->nullable();
             $table->timestamps();
         });
     }

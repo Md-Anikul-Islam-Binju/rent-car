@@ -15,26 +15,21 @@ class Booking extends Model
         'date',
         'time',
         'no_of_adults',
-
         'baby_seat',
         'booster_seat',
-
-
         'pickup_location',
         'drop_location',
-
         'name',
         'email',
         'phone',
         'notes',
         'total_kilometers',
         'is_duration_trip',
-
         'is_round_trip',
         'total_amount',
         'payment_status',
-
-
+        'flight_arrival_time',
+        'flight_number',
 
 
     ];
