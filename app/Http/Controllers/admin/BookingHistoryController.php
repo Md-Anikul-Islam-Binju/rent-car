@@ -19,25 +19,6 @@ class BookingHistoryController extends Controller
     public function calendarData()
     {
         $bookings = Booking::with(['service', 'fleet'])->get();
-
-//        $events = $bookings->map(function ($booking) {
-//            return [
-//                'id'    => $booking->id,
-//                'title' => $booking->name . ' (' . $booking->service->name . ')',
-//                'start' => $booking->date . 'T' . $booking->time,
-//                'end'   => $booking->date . 'T' . $booking->time, // extend with duration if needed
-//                'color' => '#007bff', // blue background
-//                'textColor' => '#000000',// white text
-//                'extendedProps' => [
-//                    'pickup' => $booking->pickup_location,
-//                    'drop'   => $booking->drop_location,
-//                    'adults' => $booking->no_of_adults,
-//                    'fleet'  => $booking->fleet->name,
-//                    'phone'  => $booking->phone,
-//                ]
-//            ];
-//        });
-
         // in BookingHistoryController::calendarData()
         $events = $bookings->map(function ($booking) {
             return [
@@ -62,5 +43,22 @@ class BookingHistoryController extends Controller
 
         return response()->json($events);
     }
+
+
+    public function invoice($id)
+    {
+        $bookingHistory = Booking::where('id',$id)->with('service', 'fleet')->latest()->first();
+        return view('admin.pages.bookingHistory.invoice', compact('bookingHistory'));
+
+    }
+
+    public function invoiceUser($id)
+    {
+        $bookingHistory = Booking::where('id',$id)->with('service', 'fleet')->latest()->first();
+        return view('admin.pages.bookingHistory.invoiceUser', compact('bookingHistory'));
+
+    }
+
+
 
 }

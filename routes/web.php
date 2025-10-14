@@ -27,6 +27,7 @@ Route::get('/', function () {
 //payment
 Route::get('/payment/{booking_id}', [PaymentController::class, 'payment'])->name('payment');
 Route::post('/stripe-post', [PaymentController::class, 'stripePost'])->name('stripe.post');
+Route::get('/user-booking-invoice/{id}', [BookingHistoryController::class, 'invoiceUser'])->name('user.booking.invoice');
 
 
 //Admin
@@ -69,5 +70,7 @@ Route::middleware('auth')->group(callback: function () {
 
     Route::get('/booking-history', [BookingHistoryController::class, 'bookingHistory'])->name('booking.history');
     Route::get('/bookings/calendar', [BookingHistoryController::class, 'calendarData'])->name('bookings.calendar');
+    Route::get('/booking-invoice/{id}', [BookingHistoryController::class, 'invoice'])->name('booking.invoice');
+
 });
 require __DIR__.'/auth.php';

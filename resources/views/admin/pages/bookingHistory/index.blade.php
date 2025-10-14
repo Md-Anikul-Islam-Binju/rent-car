@@ -35,6 +35,7 @@
                         <th>Drop Location</th>
                         <th>Total Destination</th>
                         <th>Total Fare</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -58,6 +59,9 @@
                             <td>{{$bookingHistoryData->drop_location}} </td>
                             <td>{{$bookingHistoryData->total_kilometers}} </td>
                             <td>{{$bookingHistoryData->total_kilometers * $bookingHistoryData->fleet->per_kilometer_fare}} </td>
+                            <td>
+                                <a href="{{ route('booking.invoice', $bookingHistoryData->id) }}" class="btn btn-primary btn-sm" title="View Invoice"><i class="fa fa-eye"></i> View Invoice</a>
+                            </td>
                            </tr>
                     @endforeach
                     </tbody>
