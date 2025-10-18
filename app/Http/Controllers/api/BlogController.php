@@ -20,9 +20,9 @@ class BlogController extends Controller
     }
 
 
-    public function blogSpecific($id)
+    public function blogSpecific($slug)
     {
-        $blogSpecific = Blog::where('id', $id)->first();
+        $blogSpecific = Blog::where('slug', $slug)->first();
         if ($blogSpecific) {
             // prepend image path
             $blogSpecific->image = asset('images/blog/' . $blogSpecific->image);

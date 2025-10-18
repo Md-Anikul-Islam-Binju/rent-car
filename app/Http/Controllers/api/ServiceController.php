@@ -22,9 +22,9 @@ class ServiceController extends Controller
         return response()->json(['services' => $services], 200);
     }
 
-    public function serviceSpecific($id)
+    public function serviceSpecific($slug)
     {
-        $serviceSpecific = Service::where('id', $id)->first();
+        $serviceSpecific = Service::where('slug', $slug)->first();
         if ($serviceSpecific) {
             // prepend image path
             $serviceSpecific->image = asset('images/service/' . $serviceSpecific->image);

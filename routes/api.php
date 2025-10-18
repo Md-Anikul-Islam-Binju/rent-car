@@ -29,11 +29,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/fleets', [FleetController::class, 'fleet']);
 Route::get('/slider', [SliderController::class, 'slider']);
-Route::get('/specific-fleet/{id}', [FleetController::class, 'fleetSpecific']);
+Route::get('/specific-fleet/{slug}', [FleetController::class, 'fleetSpecific']);
 Route::get('/services', [ServiceController::class, 'service']);
-Route::get('/specific-services/{id}', [ServiceController::class, 'serviceSpecific']);
+Route::get('/specific-services/{slug}', [ServiceController::class, 'serviceSpecific']);
 Route::get('/blog', [BlogController::class, 'blog']);
-Route::get('/specific-blog/{id}', [BlogController::class, 'blogSpecific']);
+Route::get('/specific-blog/{slug}', [BlogController::class, 'blogSpecific']);
 Route::post('/booking-store', [BookingController::class, 'store']);
 
 Route::post('/contact-store', [ContactController::class, 'storeContact']);

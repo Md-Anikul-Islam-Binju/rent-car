@@ -11,6 +11,7 @@ class Fleet extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'model',
         'number',
         'total_seats',

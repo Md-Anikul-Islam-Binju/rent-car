@@ -28,6 +28,7 @@ class FleetController extends Controller
 
             $fleet = new Fleet();
             $fleet->name = $request->name;
+            $fleet->slug = strtolower(str_replace(' ', '-', $request->name));
             $fleet->model = $request->model;
             $fleet->number = $request->number;
             $fleet->base_fare = $request->base_fare;
@@ -66,6 +67,7 @@ class FleetController extends Controller
 
             $fleet = Fleet::findOrFail($id);
             $fleet->name = $request->name;
+            $fleet->slug = strtolower(str_replace(' ', '-', $request->name));
             $fleet->model = $request->model;
             $fleet->number = $request->number;
             $fleet->total_seats = $request->total_seats;

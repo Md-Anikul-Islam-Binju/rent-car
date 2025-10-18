@@ -25,6 +25,7 @@ class BlogController extends Controller
 
             $blog = new Blog();
             $blog->title = $request->title;
+            $blog->slug = strtolower(str_replace(' ', '-', $request->title));
             $blog->short_details = $request->short_details;
             $blog->details = $request->details;
             if ($request->image) {
@@ -52,6 +53,7 @@ class BlogController extends Controller
 
             $blog = Blog::findOrFail($id);
             $blog->title = $request->title;
+            $blog->slug = strtolower(str_replace(' ', '-', $request->title));
             $blog->details = $request->details;
             $blog->short_details = $request->short_details;
             if ($request->image) {
