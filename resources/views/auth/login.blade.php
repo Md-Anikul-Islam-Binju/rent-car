@@ -26,10 +26,10 @@
                             <div class="d-flex flex-column h-100">
                                 <div class="auth-brand p-4">
                                     <a href="{{ url('/') }}" class="logo-light">
-                                        <img src="{{ asset('backend/images/car.png') }}" alt="logo" height="50">
+                                        <img src="{{ asset('backend/images/logo.png') }}" alt="logo" height="150">
                                     </a>
                                     <a href="{{ url('/') }}" class="logo-dark">
-                                        <img src="{{ asset('backend/images/car.png') }}" alt="dark logo" height="50">
+                                        <img src="{{ asset('backend/images/logo.png') }}" alt="dark logo" height="150">
                                     </a>
                                 </div>
                                 <div class="p-4 pt-0 my-auto">
