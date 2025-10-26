@@ -34,6 +34,9 @@ return new class extends Migration
             $table->string('payment_status')->default('unpaid'); // unpaid, paid, refunded
             $table->time('flight_arrival_time')->nullable();
             $table->string('flight_number')->nullable();
+
+            $table->time('flight_departure')->nullable();
+            $table->string('duration')->nullable();
             $table->timestamps();
         });
     }

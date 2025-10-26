@@ -30,6 +30,8 @@ class Booking extends Model
         'payment_status',
         'flight_arrival_time',
         'flight_number',
+        'flight_departure',
+        'duration',
 
 
     ];

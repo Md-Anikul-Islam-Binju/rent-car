@@ -72,6 +72,13 @@ class BookingController extends Controller
             'is_duration_trip' => $request->is_duration_trip ?? 0,
             'is_round_trip' => $request->is_round_trip ?? 0,
             'total_amount' => $request->total_amount,
+
+            'flight_arrival_time' => $request->flight_arrival_time ?? null,
+            'flight_number' => $request->flight_number ?? null,
+            'flight_departure' => $request->flight_departure ?? null,
+            'duration' => $request->duration ?? null,
+
+
         ]);
 
         // Send mail (with password if new account)
