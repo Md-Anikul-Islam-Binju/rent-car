@@ -53,13 +53,13 @@
                                 {{$bookingHistoryData->fleet->number}}
                             </td>
                             <td>
-                                {{$bookingHistoryData->date}}
-                                {{$bookingHistoryData->time}}
+                                {{$bookingHistoryData->date}}<br>
+                                {{$bookingHistoryData->time}}<br>
                             </td>
 
                             <td>
-                                Pickup: {{$bookingHistoryData->pickup_location}}
-                                Drop: {{$bookingHistoryData->drop_location}}
+                                Pickup: {{$bookingHistoryData->pickup_location}}<br>
+                                Drop: {{$bookingHistoryData->drop_location}}<br>
                             </td>
                             <td>{{$bookingHistoryData->total_kilometers}} </td>
                             <td>{{$bookingHistoryData->total_kilometers * $bookingHistoryData->fleet->per_kilometer_fare}} </td>
