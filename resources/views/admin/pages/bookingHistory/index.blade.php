@@ -29,10 +29,9 @@
                         <th>Passenger Info</th>
                         <th>Service</th>
                         <th>Fleet</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Pickup Location</th>
-                        <th>Drop Location</th>
+                        <th>Date & Time</th>
+
+                        <th>Location</th>
                         <th>Total Destination</th>
                         <th>Total Fare</th>
                         <th>Action</th>
@@ -53,10 +52,15 @@
                                 {{$bookingHistoryData->fleet->model}}<br>
                                 {{$bookingHistoryData->fleet->number}}
                             </td>
-                            <td>{{$bookingHistoryData->date}}</td>
-                            <td>{{$bookingHistoryData->time}}</td>
-                            <td>{{$bookingHistoryData->pickup_location}}</td>
-                            <td>{{$bookingHistoryData->drop_location}} </td>
+                            <td>
+                                {{$bookingHistoryData->date}}
+                                {{$bookingHistoryData->time}}
+                            </td>
+
+                            <td>
+                                Pickup: {{$bookingHistoryData->pickup_location}}
+                                Drop: {{$bookingHistoryData->drop_location}}
+                            </td>
                             <td>{{$bookingHistoryData->total_kilometers}} </td>
                             <td>{{$bookingHistoryData->total_kilometers * $bookingHistoryData->fleet->per_kilometer_fare}} </td>
                             <td>
