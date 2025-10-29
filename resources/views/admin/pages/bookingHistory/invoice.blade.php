@@ -10,7 +10,7 @@
                     <!-- Invoice Logo-->
                     <div class="clearfix">
                         <div class="float-start mb-3">
-                            <img src="{{URL::to('backend/images/logo.jpeg')}}" alt="dark logo" height="50">
+                            <img src="{{ asset('backend/images/logo.png') }}" alt="dark logo" height="100">
                         </div>
                         <div class="float-end">
                             <h4 class="m-0 d-print-none">Invoice</h4>

@@ -23,7 +23,7 @@
             margin-bottom: 20px;
         }
         .invoice-header img {
-            height: 50px;
+            height: 100px;
         }
         .table thead {
             background-color: #f2f2f2;
@@ -43,7 +43,7 @@
             <div class="card-body">
                 <!-- Header -->
                 <div class="d-flex justify-content-between align-items-center invoice-header">
-                    <img src="{{ asset('backend/images/logo.jpeg') }}" alt="Logo">
+                    <img src="{{ asset('backend/images/logo.png') }}" alt="Logo"  height="100>
                     <h4 class="m-0">Invoice</h4>
                 </div>
 
