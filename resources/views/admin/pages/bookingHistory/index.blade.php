@@ -32,8 +32,7 @@
                         <th>Date & Time</th>
 
                         <th>Location</th>
-                        <th>Total Destination</th>
-                        <th>Total Fare</th>
+                        <th>Total</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -61,8 +60,10 @@
                                 Pickup: {{$bookingHistoryData->pickup_location}}<br>
                                 Drop: {{$bookingHistoryData->drop_location}}<br>
                             </td>
-                            <td>{{$bookingHistoryData->total_kilometers}} </td>
-                            <td>{{$bookingHistoryData->total_kilometers * $bookingHistoryData->fleet->per_kilometer_fare}} </td>
+                            <td>
+                                Destination: {{$bookingHistoryData->total_kilometers}} <br>
+                                Fare: {{$bookingHistoryData->total_kilometers * $bookingHistoryData->fleet->per_kilometer_fare}} <br>
+                            </td>
                             <td>
                                 <a href="{{ route('booking.invoice', $bookingHistoryData->id) }}" class="btn btn-primary btn-sm" title="View Invoice"><i class="fa fa-eye"></i> View Invoice</a>
                             </td>
