@@ -28,7 +28,7 @@
                     <thead>
                     <tr>
                         <th>S/N</th>
-                        <th>Car Info</th>
+                        <th>Car Info & Status</th>
                         <th>Seats & Bag</th>
                         <th>Fare</th>
                         <th>image</th>
@@ -44,6 +44,7 @@
                                 Name: {{$fleetData->name}}<br>
                                 Model: {{$fleetData->model}}<br>
                                 Number: {{$fleetData->number}}<br>
+                                Status: {{$fleetData->status=='active'? 'Active':'Inactive'}}
                             </td>
                             <td>
                                 Seats: {{$fleetData->total_seats}}<br>
@@ -59,7 +60,6 @@
                             <td>
                                 <img src="{{asset('images/fleet/'. $fleetData->image )}}" alt="Current Image" style="max-width: 50px;">
                             </td>
-                            <td>{{$fleetData->status=='active'? 'Active':'Inactive'}}</td>
                             <td style="width: 100px;">
                                 <div class="d-flex justify-content-end gap-1">
                                     <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#editNewModalId{{$fleetData->id}}">Edit</button>
