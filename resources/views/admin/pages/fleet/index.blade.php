@@ -32,7 +32,6 @@
                         <th>Seats & Bag</th>
                         <th>Fare</th>
                         <th>image</th>
-                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                     </thead>
