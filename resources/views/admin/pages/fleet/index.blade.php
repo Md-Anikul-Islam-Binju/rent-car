@@ -28,15 +28,9 @@
                     <thead>
                     <tr>
                         <th>S/N</th>
-                        <th>Name</th>
-                        <th>Model</th>
-                        <th>Number</th>
-                        <th>Seats</th>
-                        <th>Checking Bag</th>
-                        <th>Carry Bag</th>
-                        <th>PKF</th>
-                        <th>Base Fare</th>
-                        <th>PKFDW</th>
+                        <th>Car Info</th>
+                        <th>Seats & Bag</th>
+                        <th>Fare</th>
                         <th>image</th>
                         <th>Status</th>
                         <th>Action</th>
@@ -46,15 +40,22 @@
                     @foreach($fleets as $key=>$fleetData)
                         <tr>
                             <td>{{$key+1}}</td>
-                            <td>{{$fleetData->name}}</td>
-                            <td>{{$fleetData->model}}</td>
-                            <td>{{$fleetData->number}}</td>
-                            <td>{{$fleetData->total_seats}}</td>
-                            <td>{{$fleetData->checking_bag}}</td>
-                            <td>{{$fleetData->carry_bag}}</td>
-                            <td>{{$fleetData->base_fare	}} $</td>
-                            <td>{{$fleetData->per_kilometer_fare}} $</td>
-                            <td>{{$fleetData->per_kilometer_fare_duration_wise}} $</td>
+                            <td>
+                                Name: {{$fleetData->name}}<br>
+                                Model: {{$fleetData->model}}<br>
+                                Number: {{$fleetData->number}}<br>
+                            </td>
+                            <td>
+                                Seats: {{$fleetData->total_seats}}<br>
+                                Checking Bag: {{$fleetData->checking_bag}}<br>
+                                Carry Bag: {{$fleetData->carry_bag}}<br>
+                            </td>
+                            <td>
+                                Base Fare: {{$fleetData->base_fare	}} $ <br>
+                                Per Kilo Fare: {{$fleetData->per_kilometer_fare}} $ <br>
+                                Per Kilo Fare Duration Wise:{{$fleetData->per_kilometer_fare_duration_wise}} $
+                            </td>
+
                             <td>
                                 <img src="{{asset('images/fleet/'. $fleetData->image )}}" alt="Current Image" style="max-width: 50px;">
                             </td>
