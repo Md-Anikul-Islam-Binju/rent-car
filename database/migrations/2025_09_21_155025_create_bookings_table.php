@@ -30,6 +30,12 @@ return new class extends Migration
             $table->string('total_kilometers')->nullable();
             $table->boolean('is_duration_trip')->default(0);
             $table->boolean('is_round_trip')->default(0);
+
+            $table->string('round_trip_pickup')->nullable();
+            $table->string('round_trip_dropup')->nullable();
+            $table->date('round_trip_date')->nullable();
+            $table->time('round_trip_time')->nullable();
+
             $table->string('total_amount')->nullable();
             $table->string('payment_status')->default('unpaid'); // unpaid, paid, refunded
             $table->time('flight_arrival_time')->nullable();

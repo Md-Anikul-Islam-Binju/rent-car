@@ -25,7 +25,13 @@ class Booking extends Model
         'notes',
         'total_kilometers',
         'is_duration_trip',
+
         'is_round_trip',
+        'round_trip_pickup',
+        'round_trip_dropup',
+        'round_trip_date',
+        'round_trip_time',
+
         'total_amount',
         'payment_status',
         'flight_arrival_time',

@@ -70,6 +70,17 @@ class BookingController extends Controller
             'notes' => $request->notes,
             'total_kilometers' => $request->total_kilometers,
             'is_duration_trip' => $request->is_duration_trip ?? 0,
+
+            'round_trip_pickup' => $request->round_trip_pickup ?? null,
+            'round_trip_dropup' => $request->round_trip_dropup ?? null,
+            'round_trip_date' => $request->round_trip_date ?? null,
+            'round_trip_time' => $request->round_trip_time ?? null,
+
+
+
+
+
+
             'is_round_trip' => $request->is_round_trip ?? 0,
             'total_amount' => $request->total_amount,
 
