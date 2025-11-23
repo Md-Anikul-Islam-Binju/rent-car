@@ -32,7 +32,7 @@ return new class extends Migration
             $table->boolean('is_round_trip')->default(0);
 
             $table->string('round_trip_pickup')->nullable();
-            $table->string('round_trip_dropup')->nullable();
+            $table->string('round_trip_dropoff')->nullable();
             $table->date('round_trip_date')->nullable();
             $table->time('round_trip_time')->nullable();
 
@@ -40,8 +40,9 @@ return new class extends Migration
             $table->string('payment_status')->default('unpaid'); // unpaid, paid, refunded
             $table->time('flight_arrival_time')->nullable();
             $table->string('flight_number')->nullable();
-
-            $table->time('flight_departure')->nullable();
+            $table->string('transfer_type')->nullable();
+            $table->string('return_flight_number')->nullable();
+            $table->time('return_flight_arrival_time')->nullable();
             $table->string('duration')->nullable();
             $table->timestamps();
         });

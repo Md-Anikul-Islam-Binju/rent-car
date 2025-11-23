@@ -28,15 +28,18 @@ class Booking extends Model
 
         'is_round_trip',
         'round_trip_pickup',
-        'round_trip_dropup',
+        'round_trip_dropoff',
         'round_trip_date',
         'round_trip_time',
+
+        'transfer_type',
+        'return_flight_number',
+        'return_flight_arrival_time',
 
         'total_amount',
         'payment_status',
         'flight_arrival_time',
         'flight_number',
-        'flight_departure',
         'duration',
 
 

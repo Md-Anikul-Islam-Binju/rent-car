@@ -72,7 +72,7 @@ class BookingController extends Controller
             'is_duration_trip' => $request->is_duration_trip ?? 0,
 
             'round_trip_pickup' => $request->round_trip_pickup ?? null,
-            'round_trip_dropup' => $request->round_trip_dropup ?? null,
+            'round_trip_dropoff' => $request->round_trip_dropoff ?? null,
             'round_trip_date' => $request->round_trip_date ?? null,
             'round_trip_time' => $request->round_trip_time ?? null,
 
@@ -86,7 +86,9 @@ class BookingController extends Controller
 
             'flight_arrival_time' => $request->flight_arrival_time ?? null,
             'flight_number' => $request->flight_number ?? null,
-            'flight_departure' => $request->flight_departure ?? null,
+            'transfer_type' => $request->transfer_type ?? null,
+            'return_flight_number' => $request->return_flight_number ?? null,
+            'return_flight_arrival_time' => $request->return_flight_arrival_time ?? null,
             'duration' => $request->duration ?? null,
 
 
