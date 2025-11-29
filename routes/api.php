@@ -42,6 +42,9 @@ Route::post('/contact-store', [ContactController::class, 'storeContact']);
 
 Route::post('/login', [UserAccountController::class, 'login']);
 
+Route::post('/password/forgot', [UserAccountController::class, 'sendToken']);
+Route::post('/password/reset', [UserAccountController::class, 'reset']);
+
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/my-bookings', [BookingController::class, 'myBookings']);
 });
