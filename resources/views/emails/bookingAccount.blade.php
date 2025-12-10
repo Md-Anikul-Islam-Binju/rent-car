@@ -26,6 +26,14 @@
 
 <p>You can log in to manage your bookings anytime.</p>
 <br>
+<!-- Login Button -->
+<p>
+    <a href="https://luxurychauffeurcar.com.au/?showLogin=true"
+       style="background:#000000;color:#ffffff;padding:12px 22px;text-decoration:none;
+              border-radius:6px;display:inline-block;font-weight:bold;">
+        Login to Your Account
+    </a>
+</p>
 <p>Best regards,<br>Support Team</p>
 </body>
 </html>
